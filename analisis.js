@@ -2,7 +2,6 @@
 const url = `${endpoint}/vision/v3.2/analyze?visualFeatures=Description,Tags,Objects`
 const imageURL = "https://www.mindicsalud.com/sites/default/files/styles/blog_full/public/ninos-pelota.jpg"
 
-
 async function analizarContenido() {
     try {
         console.log("Analizando imagen...")

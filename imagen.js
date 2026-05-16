@@ -1,3 +1,6 @@
+const suscriptionkey = ""
+const endpoint = ""
+
 // La URL describe las funcionalidades que deseamos aprovechar
 const url = `${endpoint}/vision/v3.2/analyze?visualFeatures=Categories,Description,Color`
 

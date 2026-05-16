@@ -1,7 +1,7 @@
 {
   "name": "azure-ia",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Descripción de la imágen",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElLeoZalds/Azure-ia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ElLeoZalds/Azure-ia/issues"
+  },
+  "homepage": "https://github.com/ElLeoZalds/Azure-ia#readme"
 }
