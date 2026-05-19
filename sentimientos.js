@@ -3,11 +3,13 @@ const endpoint = ""
 
 const URL = `${endpoint}/language/:analyze-text?api-version=2023-04-01`
 
-async function analizarSentimientos(){
+async function analizarSentimientos() {
     try {
-        
+
         // Podemos enviar mas de un documento
-        const documentoAnlizar = {
+
+        const documentoAnalizar = {
+
             kind: "SentimentAnalysis",
             analysisInput: {
                 documents: [
@@ -31,20 +33,20 @@ async function analizarSentimientos(){
         } // documentosAnalizar 
 
         console.log("Enviando multilpes documento a Azure...")
-        
-        const response = await fetch(URL,{
-             method: 'POST',
-            headers:{
+
+        const response = await fetch(URL, {
+            method: 'POST',
+            headers: {
                 "Ocp-Apim-Subscription-Key": suscriptionkey,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(documentoAnlizar)
         })
 
-        if(!response.ok){
+        if (!response.ok) {
             const errorData = await response.json()
-			throw new Error(errorData.error.message)
-		}
+            throw new Error(errorData.error.message)
+        }
 
         const data = await response.json()
         console.log(data)
@@ -55,7 +57,7 @@ async function analizarSentimientos(){
             console.log(`Documento # ${document.id}`)
 
             // Contenido analizado
-            const contenidoOriginal = documentoAnlizar.analysisInput.documents.find(d => d.id === document.id).text
+            const contenidoOriginal = documentoAnalizar.analysisInput.documents.find(d => d.id === document.id).text
 
             console.log(contenidoOriginal)
 
