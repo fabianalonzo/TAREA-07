@@ -51,7 +51,7 @@ document.getElementById('btnEnviar').addEventListener('click', async () => {
         data.results.documents.forEach(document => {
             resultadoHTML += `Documento # ${document.id}\n`;
             resultadoHTML += `Texto analizado: "${textoDelUsuario}"\n\n`;
-            
+
             const scores = document.confidenceScores;
             resultadoHTML += `Puntuaciones de confianza:\n`;
             resultadoHTML += `- positivo: ${scores.positive}\n`;
